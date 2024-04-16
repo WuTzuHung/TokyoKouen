@@ -17,12 +17,12 @@ import Header from './components/Header.vue';
 .header{
   margin: 0;
   widows: 100vw;
-  height: 15vh;
+  height: 13vh;
 }
 
 .content{
   width: 100vw;
-  height: 918px;
+  height: 110vh;
   text-align: center;
   background-color: bisque;
 }

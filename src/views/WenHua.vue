@@ -777,8 +777,9 @@ path {
     align-items: start;
 
     svg {
-      width: 1000px;
-      height: 891px;
+      width: 50vw;
+      height: 100vh;
+      margin-top: 8vh;
     }
   }
   .areaDataRight {
