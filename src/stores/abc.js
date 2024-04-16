@@ -199,7 +199,7 @@ export default defineStore("data", {
                 })
         },
         getSport() {
-            fetch("/src/components/API.JSON")
+            fetch("src/components/API.JSON")
                 .then(response => response.json())
                 .then(data => {
                     this.objs = data
