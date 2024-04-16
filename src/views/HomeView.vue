@@ -261,14 +261,14 @@ export default{
               <path id="江東区" @click="this.get(),this.areaC()" name="area" vector-effect="none" fill-rule="evenodd" d="M4090.35,3758.4 L4087.19,3760.11 L4075.56,3766.36 L4059.26,3775.19 L4056.44,3776.76 L4022.74,3795.01 L4011.14,3801.32 L4008.85,3802.56 L3983.52,3816.32 L3965.33,3826.17 L3965.54,3826.43 L3961.85,3828.45 L3930.49,3795.91 L3929.38,3794.75 L3928.98,3794.33 L3918.23,3783.09 L3901.38,3765.64 L3894.42,3758.4 L3886.57,3750.23 L3884.38,3748.94 L3854.15,3731.03 L3846.39,3726.25 L3843.4,3724.47 L3842.22,3725.85 L3841.85,3725.99 L3841.16,3725.64 L3832.83,3720.23 L3830.3,3718.55 L3830.68,3718.11 L3790.85,3694.62 L3757.62,3674.78 L3753.46,3672.3 L3718.85,3651.98 L3686.84,3632.88 L3684.8,3631.64 L3676.51,3626.62 L3676.02,3627.01 L3669.28,3631.64 L3668.6,3632.1 L3668.13,3631.64 L3662.6,3626.27 L3666.43,3623.67 L3666.05,3623.37 L3662.98,3625.44 L3662.31,3624.83 L3666.33,3622.12 L3666.98,3622.7 L3667,3622.69 L3667.38,3623.04 L3668.72,3622.11 L3656.78,3614.88 L3656.63,3613.99 L3664.33,3609.84 L3664.89,3610.44 L3674.99,3604.95 L3681.45,3601.45 L3687.93,3597.92 L3694.13,3594.55 L3694.37,3594.42 L3697.87,3592.51 L3701.92,3590.29 L3720.92,3579.9 L3736.2,3571.66 L3744.53,3567.21 L3749.75,3564.39 L3757.62,3560.1 L3779.99,3547.91 L3791.88,3541.5 L3815.08,3528.92 L3824.94,3540.79 L3832.82,3550.57 L3841.45,3561.34 L3843.02,3563.31 L3870.72,3548.34 L3865.18,3541.48 L3854.65,3528.54 L3851.93,3525.21 L3842.74,3513.92 L3842.8,3513.89 L3846.63,3511.79 L3859.42,3504.88 L3868.11,3500.18 L3884.38,3491.36 L3907.45,3478.86 L3923.68,3469.97 L3928.89,3467.16 L3935.89,3463.37 L3958.58,3451.05 L3987.67,3435.18 L4011.14,3422.47 L4050,3401.43 L4065.11,3393.27 L4064.31,3392.16 L4064.23,3391.98 L4064.28,3391.87 L4065.22,3391.11 L4065.8,3390.91 L4065.98,3390.94 L4066.15,3391.08 L4066.86,3392.04 L4066.85,3392.13 L4066.74,3392.39 L4076.11,3406.91 L4086.08,3422.47 L4099.22,3442.78 L4110.47,3460.37 L4122.31,3478.59 L4134.61,3497.81 L4137.9,3502.91 L4139.18,3504.88 L4158.56,3534.85 L4162.79,3541.44 L4168.39,3550.12 L4169.78,3549.7 L4173.73,3555.88 L4182.89,3569.97 L4190.66,3582.24 L4195.78,3590.21 L4198.28,3594.11 L4212.62,3616.15 L4222.58,3631.64 L4223.83,3633.59 L4228.23,3640.5 L4241.42,3661.7 L4246.31,3668.95 L4246.86,3668.64 L4247.33,3668.62 L4247.83,3668.9 L4248.04,3669.29 L4248.21,3669.67 L4248.15,3670.05 L4247.87,3670.45 L4247.49,3670.66 L4246.96,3670.78 L4246.2,3671.05 L4247.58,3673.23 L4247.43,3673.3 L4247.34,3673.18 L4232.42,3681.34 L4227.99,3683.76 L4189.61,3704.52 L4169.72,3715.32 L4137.9,3732.61 L4100.51,3752.9 L4090.35,3758.4"/>
            </svg>
         <div class="rightshow">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 10px; background-color: #c2834b; border: none; color: #000000;">請選擇</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top: 5vh; background-color: #c2834b; border: none; color: #000000;">請選擇</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#" @click="oneC()">文化</a></li>
                 <li><a class="dropdown-item" href="#" @click="twoC()">公園與公共設施</a></li>
                 <li><a class="dropdown-item" href="#" @click="threeC()">體育設施</a></li>
             </ul>
             <div class="card">
-                <img src="..." class="card-img-top img-fluid" style="max-height: 430px; background-size: cover;" alt="..." id="img1">
+                <!-- <img src="..." class="card-img-top img-fluid" style="max-height: 430px; background-size: cover;" alt="..." id="img1"> -->
                 <div class="card-body" style="height: 200px;">
                     <p class="card-text titleW" id="titleW">名稱</p>
                     <p class="card-text introduceW" id="introduceW" style="height: 80%;overflow: scroll;">介紹</p>
@@ -300,7 +300,7 @@ export default{
     display: flex;
     align-items: start;
     width: 100hw;
-    height: 150vh;
+    height: 100vh;
     background-color: bisque;
 }
 
@@ -321,6 +321,7 @@ svg{
     // align-self: baseline;
     vertical-align: top;
     align-self: flex-start;
+    margin-top: 5vh;
     width: 860px;
     height: 730px;
     // position: fixed;
