@@ -305,7 +305,8 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    margin-top: 15vh;
+    height: 100vh;
     width: 50vw;
 }
 
@@ -358,21 +359,21 @@ svg {
             justify-content: space-around;
             color: black;
 
-            &:active {
-                font-size: 30pt;
-                transition: 0.8s;
-            }
+            // &:active {
+            //     font-size: 30pt;
+            //     transition: 0.8s;
+            // }
 
-            &:hover {
-                font-size: 80pt;
-                background: linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
-                background: -webkit-linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                transition: 0.5s;
+            // &:hover {
+            //     font-size: 80pt;
+            //     background: linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
+            //     background: -webkit-linear-gradient(to top, #3a1c71, #d76d77, #ffaf7b);
+            //     background-clip: text;
+            //     -webkit-background-clip: text;
+            //     color: transparent;
+            //     transition: 0.5s;
 
-            }
+            // }
         }
 
         p {

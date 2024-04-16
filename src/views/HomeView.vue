@@ -299,8 +299,8 @@ export default{
 .lock{
     display: flex;
     align-items: start;
-    width: 100%;
-    height: 1100px;
+    width: 100hw;
+    height: 150vh;
     background-color: bisque;
 }
 

@@ -223,16 +223,18 @@ svg{
     // align-self: baseline;
     vertical-align: top;
     align-self: flex-start;
-    width: 940px;
-    height: 900px;
+    margin-top: 3vw;
+    width: 50vw;
+    height: 100vh;
     // position: fixed;
     // left: -15%;
     // top: -70%;
 }
 
 .rightshow{
-    width: 52vw;
-    height: 730px;
+    margin-right: 2vw;
+    width: 50vw;
+    height: 100vh;
 .displaybox{
     margin: 80px 20px 0 0;
         width: 100%;
