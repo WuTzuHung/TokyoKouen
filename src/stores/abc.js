@@ -191,7 +191,7 @@ export default defineStore("data", {
             })
         },
         getWenhua() {
-            fetch("/bunnka/bunnka.json")
+            fetch("./bunnka/bunnka.json")
                 .then(response => response.json())
                 .then(data => {
                     this.objb = data
