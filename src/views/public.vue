@@ -55,7 +55,10 @@ methods:{
         let c = document.getElementById("transportP")
         let d = document.getElementById("introduceP")
         let e = document.getElementById("imgP")
-        let sjd = Math.floor(Math.random()*this.final.length)
+        // let sjd = Math.floor(Math.random()*this.final.length) // 隨機亂數
+        let sjd = this.sjd; // 將sjd初始化為0
+        sjd = sjd % this.final.length; // 使用取模運算符確保sjd不會超過final的長度
+        this.sjd++; // 增加sjd以準備下一次調用
         let f = document.getElementById("ax")
         let g = document.getElementById("axx")
         console.log(sjd)
@@ -67,9 +70,9 @@ methods:{
         d.innerText = this.final[sjd].説明[2]
         e.innerHTML = `<a href="${this.final[sjd].参照[1].参照先}">${this.final[sjd].参照[1].参照先}</a>`;
     },
-    changeColor() {
-      this.bgColor = this.getRandomTransparentColor();
-    },
+    // changeColor() {
+    //   this.bgColor = this.getRandomTransparentColor();
+    // },
     getRandomTransparentColor() {
       const randomColor = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.random()})`;
       return randomColor;
@@ -122,7 +125,7 @@ methods:{
     <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage">
   </div>
     <div style="height: 100%;" :style="{ backgroundColor: bgColor }">
-    <button @click="changeColor">Change Color</button>
+    <!-- <button @click="changeColor">Change Color</button> -->
   
     <div class="box">
     <div class="left">
