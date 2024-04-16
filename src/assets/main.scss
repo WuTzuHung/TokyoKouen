@@ -1,0 +1,15 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+@import "../assets/stylesheet/variables";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap');
+//去google font，點開文字旁邊的+，還後選擇import
+
+*{
+    font: bold 100% "Microsoft JhengHei","Zen Maru Gothic";
+    box-sizing: border-box;
+    margin: 0;
+}
