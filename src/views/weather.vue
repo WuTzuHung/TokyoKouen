@@ -192,7 +192,7 @@ export default{
             <p class="wind" id="wind">風速</p>
             <p class="wet" id="wet">濕度</p>
             <div>
-                <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"/>
+                <!-- <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"/> -->
             </div>
         </div>
         </div>

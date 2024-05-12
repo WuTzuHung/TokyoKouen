@@ -122,7 +122,7 @@ methods:{
 <template>
   
   <div>
-    <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage">
+    <!-- <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"> -->
   </div>
     <div style="height: 100%;" :style="{ backgroundColor: bgColor }">
     <!-- <button @click="changeColor">Change Color</button> -->
