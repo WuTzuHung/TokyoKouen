@@ -209,7 +209,7 @@ document.addEventListener("mousemove", function (e) {
   <!-- darkmode按鈕 -->
   <div :class="{ 'dark-mode': isDarkMode }">
     <div>
-      <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"/>
+      <!-- <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"/> -->
     </div>
 
     <!-- 顯示點擊區域名稱 -->

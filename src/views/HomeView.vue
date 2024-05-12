@@ -275,7 +275,7 @@ export default{
                 </div>
             </div>
             <div>
-                <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"/>
+                <!-- <img :src="imagePath" alt="Mouse Image" class="mouse-image" ref="mouseImage"/> -->
             </div>
             <div class="displaybox">
             <p class="title">東京天氣地圖</p> 
