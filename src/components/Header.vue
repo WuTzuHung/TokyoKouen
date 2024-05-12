@@ -17,7 +17,7 @@ export default {
 
 <template>
   <div class="headerShow">
-    <p class="b"><RouterLink to="/" class="a" :class="{'css': this.white === 1}">首頁</RouterLink></p>
+    <!-- <p class="b"><RouterLink to="/" class="a" :class="{'css': this.white === 1}">首頁</RouterLink></p> -->
     <p class="b"><RouterLink to="/weather" class="a" :class="{'css': this.white === 2}">天氣</RouterLink></p>
     <!-- <p class="b"><RouterLink to="/WenHua" class="a" :class="{'css': this.white === 5}">文化</RouterLink></p> -->
     <p class="b"><RouterLink to="/public" class="a" :class="{'css': this.white === 6}">公園與公共設施</RouterLink></p>
