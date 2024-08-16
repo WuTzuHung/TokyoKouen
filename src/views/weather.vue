@@ -240,7 +240,8 @@ svg{
     width: 40%;
     height: 87dvh;
 .displaybox{
-    margin: 80px 20px 0 0;
+    // margin: 80px 20px 0 0;
+    margin-top: 10dvh;
         width: 100%;
         height: 70dvh;
         // align-self:center;
@@ -351,5 +352,34 @@ svg{
   height: 50px;
   position: absolute;
   //   z-index: 1;
+}
+
+@media (max-width: 576px) { 
+    .lock{
+    width: 100%;
+    height: 180dvh;
+    margin-right: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg{
+    width: 96%;
+    margin-left: 4%;
+}
+
+.rightshow{
+    width: 90%;
+    height: 65dvh;
+    margin-bottom: 10dvh;
+
+    .displaybox{
+        margin-top: 0dvh;
+    }
+}
+
+
 }
 </style>

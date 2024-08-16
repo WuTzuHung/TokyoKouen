@@ -35,7 +35,7 @@ export default {
   justify-content: space-around;
   .a {
   margin-left: 10px;
-  margin-top: 10px;
+  // margin-top: 10px;
   font-size: 2em;
   line-height: 2em;
   text-decoration: none;

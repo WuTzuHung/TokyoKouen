@@ -134,7 +134,7 @@ methods:{
         <h1 class="blinking-text outlined-text text-shadow">公園名稱:</h1>
         <p v-if="vf==1" id="nameP" class="jpp"></p>
         <h1 class="blinking-text outlined-text text-shadow">詳細地址:</h1>
-        <p v-if="vf==1" id="locationP" class="jpp"></p>
+        <p v-if="vf==1" id="locationP" style=" overflow: scroll;" class="jpp jpp1"></p>
         <h1 class="blinking-text outlined-text text-shadow">交通手段:</h1>
         <p v-if="vf==1" id="transportP" style=" overflow: scroll;" class="jpp jpp2"></p>
     </div>
@@ -199,10 +199,10 @@ methods:{
            <div class="right">
             <h1 class="blinking-text outlined-text text-shadow">區域:</h1>
             <p class="jpp" id="axx"></p>
-            <h1 class="blinking-text outlined-text">介紹:</h1>
+            <h1 class="blinking-text outlined-text text-shadow">介紹:</h1>
             <p v-if="vf==1" id="introduceP" style=" overflow: scroll;" class="jpp jpp3"></p>
-            <h1 class="blinking-text outlined-text">官網:</h1>
-            <p v-if="vf==1" id="imgP" class="jpp"></p>
+            <h1 class="blinking-text outlined-text text-shadow">官網:</h1>
+            <p v-if="vf==1" id="imgP" class="jpp jpp4"></p>
            </div>
         </div>
     </div>
@@ -211,6 +211,7 @@ methods:{
 <style scoped lang="scss">
 
 .center{
+  order: 2;
 
   svg{
     // vertical-align: top;
@@ -261,6 +262,10 @@ path {
     line-height: 1.4em;
     }
 
+    .jpp1{
+      height: 15dvh;
+    }
+
     .jpp2{
       height: 27dvh;
     }
@@ -271,16 +276,18 @@ path {
 
 .left{
     width: 55%;
-    height: 87%;
+    height: 87dvh;
     // border: 1px solid black;
     margin-left: 10px;
+    order: 1;
 
 }
 .right{
     width: 45%;
-    height: 87%;
+    height: 87dvh;
     margin-right: 10px;
     // border: 1px solid black;
+    order: 2;
 
 }
 
@@ -319,5 +326,48 @@ h1.outlined-text {
   height: 50px;
   position: absolute;
 //   z-index: 1;
+}
+
+@media (max-width: 576px) { 
+
+  .box{
+    height: 270dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.center{
+  order: 1;
+svg{
+  width: 100%;
+  height: 70dvh;
+  // margin-top: 10dvh;
+
+  }
+}
+
+.left{
+  order: 2;
+  height: 100dvh;
+}
+
+.right{
+  order: 3;
+}
+
+h1.outlined-text {
+  
+  margin-top: 3dvh;
+  margin-bottom: 3dvh;
+}
+
+.jpp4{
+  font-size: 0.7em;
+}
+
 }
 </style>
