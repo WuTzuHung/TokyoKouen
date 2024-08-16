@@ -136,7 +136,7 @@ methods:{
         <h1 class="blinking-text outlined-text text-shadow">詳細地址:</h1>
         <p v-if="vf==1" id="locationP" class="jpp"></p>
         <h1 class="blinking-text outlined-text text-shadow">交通手段:</h1>
-        <p v-if="vf==1" id="transportP" class="jpp"></p>
+        <p v-if="vf==1" id="transportP" style=" overflow: scroll;" class="jpp jpp2"></p>
     </div>
     <div class="center">
     <svg class="fa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6001 6081" version="1.2" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink" height="788.32px" width="1961.91px" baseProfile="tiny">
@@ -200,7 +200,7 @@ methods:{
             <h1 class="blinking-text outlined-text text-shadow">區域:</h1>
             <p class="jpp" id="axx"></p>
             <h1 class="blinking-text outlined-text">介紹:</h1>
-            <p v-if="vf==1" id="introduceP" style="height: 60%;overflow: scroll;" class="jpp"></p>
+            <p v-if="vf==1" id="introduceP" style=" overflow: scroll;" class="jpp jpp3"></p>
             <h1 class="blinking-text outlined-text">官網:</h1>
             <p v-if="vf==1" id="imgP" class="jpp"></p>
            </div>
@@ -215,9 +215,10 @@ methods:{
   svg{
     // vertical-align: top;
     // align-self: flex-start;
-    width: 50vw;
-    height: 90vh;
-    margin-top: 8vh;
+    width: 50%;
+    height: 77dvh;
+    margin-top: 10dvh;
+
   }
 }
 
@@ -246,8 +247,8 @@ path {
 }
 
 .box{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 87dvh;
     // border: 1px solid black;
     display: flex;
 }
@@ -260,16 +261,24 @@ path {
     line-height: 1.4em;
     }
 
+    .jpp2{
+      height: 27dvh;
+    }
+
+    .jpp3{
+      height: 40dvh;
+    }
+
 .left{
     width: 55%;
-    height: 100%;
+    height: 87%;
     // border: 1px solid black;
     margin-left: 10px;
 
 }
 .right{
     width: 45%;
-    height: 100%;
+    height: 87%;
     margin-right: 10px;
     // border: 1px solid black;
 
@@ -286,9 +295,9 @@ h1.text-shadow {
   text-shadow: 2px 2px 4px #000000;
 }
 
-h1.blinking-text {
-  animation: blink 4s infinite;
-}
+// h1.blinking-text {
+//   animation: blink 4s infinite;
+// }
 
 @keyframes blink {
   0%, 100% {

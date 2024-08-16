@@ -27,8 +27,8 @@ export default {
 
 <style scoped lang="scss">
 .headerShow {
-  widows: 100%;
-  height: 100%;
+  width: 100%;
+  height: 13dvh;
   background-color: #c2834b;
   border-radius: 2px;
   display: flex;
@@ -41,9 +41,9 @@ export default {
   text-decoration: none;
   color: bisque;
   transition: 0.5s;
-  &:hover{
-    color: rgb(78, 90, 155);
-  }
+  // &:hover{
+  //   color: rgb(78, 90, 155);
+  // }
 }
 }
 .b{

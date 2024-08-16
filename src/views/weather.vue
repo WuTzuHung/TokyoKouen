@@ -201,8 +201,11 @@ export default{
 
 <style scoped lang="scss">
 .lock{
+    width: 100%;
+    height: 80dvh;
+    margin-right: 0%;
     display: flex;
-    align-items: start;
+    // align-items: start;
     background-color: bisque;
 }
 
@@ -222,23 +225,24 @@ path{
 svg{
     // align-self: baseline;
     vertical-align: top;
-    align-self: flex-start;
-    margin-top: 3vw;
-    width: 50vw;
-    height: 100vh;
+    // align-self: flex-start;
+    margin-top: 10dvh;
+    width: 50%;
+    height: 77dvh;
     // position: fixed;
     // left: -15%;
     // top: -70%;
 }
 
 .rightshow{
-    margin-right: 2vw;
-    width: 50vw;
-    height: 100vh;
+    // margin-right: 5%;
+    // margin-left: 5%;
+    width: 40%;
+    height: 87dvh;
 .displaybox{
     margin: 80px 20px 0 0;
         width: 100%;
-        height: 80%;
+        height: 70dvh;
         // align-self:center;
         // align-items: center;
         text-align: center;
@@ -267,11 +271,13 @@ svg{
         .line{
             width: 100%;
             border: 0;
-            height: 2px;
+            height: 0.3dvh;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
         }
         .location{
             margin: 0;
+            margin-top: 3dvh;
+            margin-bottom: 1dvh;
             padding: 30px 30x 20x;
             font-size: 1.875em;
             color: #ffffff;
@@ -298,6 +304,7 @@ svg{
             justify-content: space-around;
             .htemp{
                 margin: 0;
+                margin-top: 3dvh;
                 padding: 30px 30x 20x;
                 font-size: 1.4em;
                 color: #ffffff;
@@ -306,6 +313,7 @@ svg{
             }
             .ltemp{
                 margin: 0;
+                margin-top: 3dvh;
                 padding: 30px 30x 20x;
                 font-size: 1.4em;
                 color: #ffffff;
@@ -315,6 +323,8 @@ svg{
         }
         .weather{
             margin: 0;
+            margin-bottom: 1.5dvh;
+            margin-right: 2%;
             padding: 30px 30x 20x;
             font-size: 1.875em;
             color: #ffffff;
