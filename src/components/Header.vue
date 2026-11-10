@@ -28,15 +28,18 @@ export default {
 <style scoped lang="scss">
 .headerShow {
   width: 100%;
-  height: 13dvh;
+  min-height: 13dvh;
+  padding: 1dvh 2%;
   background-color: #c2834b;
   border-radius: 2px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
   .a {
   margin-left: 10px;
-  // margin-top: 10px;
-  font-size: 2em;
+  padding: 0 0.2em;
+  font-size: clamp(1.2em, 4vw, 2em);
   line-height: 2em;
   text-decoration: none;
   color: bisque;
@@ -47,6 +50,7 @@ export default {
 }
 }
 .b{
+  margin: 0;
   font-size: 1.2em;
   line-height: 1.2em;
 }
