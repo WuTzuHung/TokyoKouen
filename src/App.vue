@@ -23,6 +23,6 @@ import Header from './components/Header.vue';
   width: 100%;
   min-height: 87dvh;
   text-align: center;
-  background-color: bisque;
+  background-color: #f4f1e8;
 }
 </style>

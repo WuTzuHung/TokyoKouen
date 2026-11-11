@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { WARDS, describeWeather } from "./wards";
 export default defineStore("data", {
     //需要輸入兩個參數，1自建資料庫名稱，2資料庫內容
 
@@ -34,7 +35,16 @@ export default defineStore("data", {
         objw23:[],
         //請在這裡加入新的陣列更應存取，不要使用重複的陣列，例如新資料b就使用陣列 objb
         x:"",
-        white:1
+        white:1,
+        // 新版天氣（Open-Meteo，免費、不需金鑰）
+        wx: {},          // { 區名: { temp, feels, min, max, humidity, wind, text, icon } }
+        wxTime: "",
+        wxLoading: false,
+        wxError: "",
+        // 新版公園資料（東京都オープンデータ API）
+        parks: [],
+        parksLoading: false,
+        parksError: ""
     }
     },
 
@@ -42,6 +52,75 @@ export default defineStore("data", {
     },
 
     actions:{
+        // 一次取得 23 區的即時天氣（Open-Meteo）
+        async getWeatherAll(){
+            if (this.wxLoading || Object.keys(this.wx).length) return
+            this.wxLoading = true
+            this.wxError = ""
+            const lat = WARDS.map(w => w.lat).join(",")
+            const lon = WARDS.map(w => w.lon).join(",")
+            const url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon +
+                "&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,is_day" +
+                "&daily=temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo&wind_speed_unit=ms&forecast_days=1"
+            try {
+                const res = await fetch(url)
+                if (!res.ok) throw new Error(res.status)
+                const list = await res.json()
+                const result = {}
+                list.forEach((d, i) => {
+                    const c = d.current
+                    const desc = describeWeather(c.weather_code, c.is_day)
+                    result[WARDS[i].name] = {
+                        temp: Math.round(c.temperature_2m),
+                        feels: Math.round(c.apparent_temperature),
+                        min: Math.round(d.daily.temperature_2m_min[0]),
+                        max: Math.round(d.daily.temperature_2m_max[0]),
+                        humidity: c.relative_humidity_2m,
+                        wind: c.wind_speed_10m,
+                        text: desc.text,
+                        icon: desc.icon,
+                    }
+                })
+                this.wx = result
+                this.wxTime = list[0].current.time.replace("T", " ")
+            } catch (e) {
+                this.wxError = "天氣資料暫時無法取得，請稍後再試。"
+            } finally {
+                this.wxLoading = false
+            }
+        },
+        // 取得東京都管理的公園・公共設施
+        async getParks(){
+            if (this.parksLoading || this.parks.length) return
+            this.parksLoading = true
+            this.parksError = ""
+            try {
+                const res = await fetch("https://api.data.metro.tokyo.lg.jp/v1/PublicFacility?limit=1000")
+                if (!res.ok) throw new Error(res.status)
+                const data = await res.json()
+                this.parks = (data[0] || []).map(p => {
+                    const address = p.住所?.表記 || ""
+                    const ward = (address.match(/東京都(.+?区)/) || [])[1] || ""
+                    const site = (p.参照 || []).map(r => r.参照先).find(u => u) || ""
+                    return {
+                        id: p.ID?.識別値 || p.名称?.表記,
+                        name: p.名称?.表記 || "",
+                        kana: p.名称?.カナ表記 || "",
+                        address,
+                        ward,
+                        access: p.アクセス?.備考 || "",
+                        intro: (p.説明 || []).filter(t => t).join("\n"),
+                        site,
+                        lat: p.地理座標?.緯度,
+                        lon: p.地理座標?.経度,
+                    }
+                })
+            } catch (e) {
+                this.parksError = "公園資料暫時無法取得，請稍後再試。"
+            } finally {
+                this.parksLoading = false
+            }
+        },
         getWeather(){
             fetch("https://api.openweathermap.org/data/2.5/weather?lat=35.684884&lon=139.753708&appid=59c6fd5a18b14258d6f6736a73fe8460&lang=zh_tw&units=metric")
             .then(response => response.json())
